@@ -154,7 +154,7 @@ class Footer extends HTMLElement {
 
             <div class="row s-footer__main">
 
-                <div class="column lg-5 md-6 tab-12 s-footer__about">
+                <div class="column lg-4-5 md-6 tab-12 s-footer__about" style="margin-right: 0;">
                     <h4>Yeeching Lau</h4>
 
                     <div class="column lg-7 md-6 tab-12">
@@ -188,7 +188,7 @@ class Footer extends HTMLElement {
                 </div> <!-- end s-footer__about -->
 
                 <div class="column lg-5 md-6 tab-12">
-                    <div class="row">
+                    <div class="row row-footer">
                         <div class="column lg-6">
                             <h4>DIARY</h4>
                             <ul class="link-list">
@@ -197,13 +197,18 @@ class Footer extends HTMLElement {
                             </ul>
                         </div>
                         <div class="column lg-6">
+                            <h4>GALLERY</h4>
+                            <ul class="link-list">
+                                <li><a href="photos.html">Photos</a></li>
+                                <li><a href="videos.html">Videos</a></li>
+                            </ul>
+                        </div>
+                        <div class="column lg-6">
                             <h4>Site Links</h4>
                             <ul class="link-list">
                                 <li><a href="index.html">HOME</a></li>
-                                <li><a href="category.html">DIARY</a></li>
-                                <!-- <li><a href="category.html">Blog</a></li> -->
                                 <li><a href="about.html">BIOGRAPHY</a></li>
-                                <li><a href="about.html">Contact</a></li>
+                                <li><a href="contact.html">CONTACT</a></li>
                                 <!-- <li><a href="#0">Terms & Policy</a></li> -->
                             </ul>
                         </div>

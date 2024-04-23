@@ -604,6 +604,9 @@ textarea {
     display   : flex;
     flex-flow : row wrap;
 }
+.row-footer {
+    flex-flow : unset;
+}
 
 .row .row {
     width        : auto;
@@ -695,6 +698,11 @@ textarea {
 .lg-5 {
     flex  : none;
     width : 41.66667%;
+}
+
+.lg-4-5 {
+    flex  : none;
+    width : 35%;
 }
 
 .lg-6 {
@@ -4543,7 +4551,7 @@ body.search-is-visible .s-header__search-inner {
 }
 
 .s-footer>.row {
-    max-width : 1000px;
+    max-width : 1500px;
 }
 
 .s-footer h2 {
