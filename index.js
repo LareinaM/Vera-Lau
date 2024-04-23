@@ -61,6 +61,11 @@ var recent_articles = [
         abstract: "Director <strong>Matthew Eberhardt</strong><br>Conductor <strong>Paul Wingfield</strong><br>February-March 2024<br>Royal Birmingham Conservatoire, Birmingham B4 7XR"
     },
     {
+        text: "ACCOMPANIST",
+        title: "Singing Songs from the Shows",
+        abstract: "19:30pm, December 1st 2023<br>Shenstone Community Library, Shenstone, Lichfield WS14 0NF"
+    },
+    {
         text: "REPETITEUR",
         title: "Royal Birmingham Conservatoire Opera Scenes",
         abstract: "Musical Director <strong>Berrak Dyer</strong><br>Director <strong>Rebecca Meltzer</strong><br>November 2023<br>The Lab, Royal Birmingham Conservatoire, Birmingham B4 7XR"
@@ -72,11 +77,6 @@ var recent_articles = [
                   "           Robert Schumann- <em>Fantasiestücke, Op.73</em>" +
                   "           Benjamin Britten- <em>Sonata for Cello and Piano in C Major, op.65</em><br>13:00pm October 17th 2023" +
             "St Stephen Walbrook, 39 Walbrook, London EC4N 8BN"
-    },
-    {
-        text: "ACCOMPANIST",
-        title: "Singing Songs from the Shows",
-        abstract: "19;30pm, December 1st 2023<br>Shenstone Community Library, Shenstone, Lichfield WS14 0NF"
     }
 ]
 

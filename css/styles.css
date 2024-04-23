@@ -2981,7 +2981,7 @@ img.u-pull-left {
 
 .bricks-wrapper .brick {
     float   : left;
-    height: 40rem;
+    height: 50rem;
     padding : var(--brick-padding) var(--brick-padding) 0;
 }
 
