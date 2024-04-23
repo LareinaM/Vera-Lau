@@ -622,6 +622,9 @@ textarea {
     flex    : 1 1 0%;
     padding : 0 var(--gutter);
 }
+.column-bio {
+    padding : 0 calc(var(--gutter)*1.5);
+}
 
 .collapse>.column,
 .column.collapse {
@@ -2970,7 +2973,7 @@ img.u-pull-left {
     width : 33%;
 }
 .bricks-wrapper .brick-photo{
-    width : 25%;
+    width : 29%;
 }
 .bricks-wrapper .brick-video{
     width : 28%;
@@ -4853,7 +4856,7 @@ body.search-is-visible .s-header__search-inner {
     --text-multiplier         : 1;
     --width-content-blog      : 1200px;
     --content-primary-padding : 15rem;
-    max-width                 : var(--width-content-blog);
+    max-width                 : calc(var(--width-content-blog) * 1.2);
     padding-bottom            : var(--vspace-5);
 }
 
