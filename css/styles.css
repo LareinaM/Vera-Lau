@@ -502,11 +502,11 @@ html {
     box-sizing : border-box;
 }
 
-/* *,
+*,
 *::before,
 *::after {
     box-sizing : inherit;
-} */
+}
 
 html,
 body {
@@ -2924,6 +2924,11 @@ img.u-pull-left {
     padding-top     : var(--vspace-5);
     padding-bottom  : var(--vspace-3);
 }
+.bricks-video {
+    --brick-padding : 4rem;
+    padding-top     : var(--vspace-2);
+    padding-bottom  : var(--vspace-3);
+}
 
 .bricks--half-top-padding {
     padding-top : var(--vspace-2_5);
@@ -2958,6 +2963,9 @@ img.u-pull-left {
 }
 .bricks-wrapper .brick-photo{
     width : 25%;
+}
+.bricks-wrapper .brick-video{
+    width : 28%;
 }
 
 .bricks-wrapper .brick {
