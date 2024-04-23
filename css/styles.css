@@ -2936,6 +2936,13 @@ img.u-pull-left {
     overflow  : hidden;
 }
 
+.bricks .masonry-photo {
+    max-width : 1820px;
+    width     : 92%;
+    margin    : 0 auto var(--vspace-2);
+    overflow  : hidden;
+}
+
 .bricks .pagination {
     margin-top : var(--vspace-2);
 }
@@ -2947,12 +2954,20 @@ img.u-pull-left {
 
 .bricks-wrapper .grid-sizer,
 .bricks-wrapper .brick {
-    width : 27%;
+    width : 33%;
+}
+.bricks-wrapper .brick-photo{
+    width : 25%;
 }
 
 .bricks-wrapper .brick {
     float   : left;
     height: 40rem;
+    padding : var(--brick-padding) var(--brick-padding) 0;
+}
+
+.bricks-wrapper .brick-photo {
+    float   : left;
     padding : var(--brick-padding) var(--brick-padding) 0;
 }
 
@@ -3025,6 +3040,10 @@ img.u-pull-left {
 
 .bricks-wrapper .entry__text {
     padding : var(--vspace-1) 0 calc(var(--vspace-1) + 2px);
+}
+
+.masonry-photo .bricks-wrapper .entry__text {
+    padding : calc(var(--vspace-1) *0.7) 0 calc(var(--vspace-1)*0.7 + 2px);
 }
 
 .bricks-wrapper .entry__header {

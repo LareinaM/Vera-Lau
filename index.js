@@ -106,19 +106,19 @@ class Header extends HTMLElement {
 
                     <ul class="s-header__nav">
                     <li class="current-menu-item"><a href="index.html" title="">HOME</a></li>
-                    <li><a href="pages/about.html" title="">BIOGRAPHY</a></li>
+                    <li><a href="about.html" title="">BIOGRAPHY</a></li>
                     <li class="has-children">
                         <a href="#0" title="" class="">DIARY</a>
                         <ul class="sub-menu">
-                            <li><a href="pages/upcoming.html">Upcoming</a></li>
-                            <li><a href="pages/recent.html">Recent Engagements</a></li>
+                            <li><a href="upcoming.html">Upcoming</a></li>
+                            <li><a href="recent.html">Recent Engagements</a></li>
                         </ul>
                     </li>
                     <li class="has-children">
                         <a href="#0" title="" class="">GALLERY</a>
                         <ul class="sub-menu">
-                            <li><a href="">Photos</a></li>
-                            <li><a href="">Videos</a></li>
+                            <li><a href="photos.html">Photos</a></li>
+                            <li><a href="videos.html">Videos</a></li>
                         </ul>
                     </li>
                     <li class="has-children">
@@ -128,7 +128,7 @@ class Header extends HTMLElement {
                             <li><a href="">Sample Programmes</a></li>
                         </ul>
                     </li>
-                    <li><a href="pages/contact.html" title="">CONTACT</a></li>
+                    <li><a href="contact.html" title="">CONTACT</a></li>
 
                 </nav> <!-- end s-header__nav-wrap -->
 
@@ -192,8 +192,8 @@ class Footer extends HTMLElement {
                         <div class="column lg-6">
                             <h4>DIARY</h4>
                             <ul class="link-list">
-                                <li><a href="pages/upcoming.html">Upcoming</a></li>
-                                <li><a href="pages/recent.html">Recent Engagements</a></li>
+                                <li><a href="upcoming.html">Upcoming</a></li>
+                                <li><a href="recent.html">Recent Engagements</a></li>
                             </ul>
                         </div>
                         <div class="column lg-6">
@@ -202,8 +202,8 @@ class Footer extends HTMLElement {
                                 <li><a href="index.html">HOME</a></li>
                                 <li><a href="category.html">DIARY</a></li>
                                 <!-- <li><a href="category.html">Blog</a></li> -->
-                                <li><a href="pages/about.html">BIOGRAPHY</a></li>
-                                <li><a href="pages/about.html">Contact</a></li>
+                                <li><a href="about.html">BIOGRAPHY</a></li>
+                                <li><a href="about.html">Contact</a></li>
                                 <!-- <li><a href="#0">Terms & Policy</a></li> -->
                             </ul>
                         </div>
