@@ -1,48 +1,101 @@
 var upcoming_articles = [
     {
-        text: "Dewefsign",
-        title: "Just a Normal Simple Blog Post.",
-        abstract: "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id" +
-            "et sit proident dolor nulla" +
-            "sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit" +
-            "sint in aliqua cillum in."
+        text: "ACCOMPANIST",
+        title: "Lunchtime Concert",
+        abstract: "12:30pm, April 26th 2024<br>St. Chad's Church, Birmingham B4 6EU"
     },
     {
-        text: "Lifestyle",
-        title: "Throwback To The Good Old Days.",
-        abstract: "Ipsam odio corrupti et dolores odit aliquid quo. Dolore consectetur a sit modi" +
-            "quam debitis non omnis. Enim ullam" +
-            "voluptatem ipsum soluta sed debitis nihil quasi. Et et et sit. Lorem ipsum Sed" +
-            "eiusmod esse aliqua sed incididunt."
-    }
+        text: "REPETITEUR",
+        title: "<em>NEW YEAR</em>- Michael Tippett",
+        abstract: "April-July, 2024<br>Birmingham Opera Company"
+    },
+    {
+        text: "ACCOMPANIST",
+        title: "Voice and Piano Concert with Ana Salaridze",
+        abstract: "14:00pm, June 12nd 2024<br>Hagley Road Retirement Village, Birmingham B17 8BH"
+    },
+    {
+        text: "REPETITEUR",
+        title: "Royal Birmingham Conservatoire Summer Opera<br><em>HANSEL&GRETEL</em>- Engelbert Humperdinck",
+        abstract: "Director <strong>Matthew Eberhardt</strong><br>Conductor <strong>Paul Wingfield</strong>" +
+            "May-June 2024<br>Royal Birmingham Conservatoire, Birmingham B4 7XR"
+    },
+    {
+        text: "CHMABER PIANIST",
+        title: "Charity Concert with Chian-Chian Hsu",
+        abstract: "Programme: Francois Francoeur <em>Cello Sonata in E Major</em><br>15pm, June 15th 2024<br>Gilden's Art Gallery, 74 Heath St, London NW3 1DN"
+    },
+    {
+        text: "CHMABER PIANIST",
+        title: "Concert with Chian-Chian Hsu",
+        abstract: "Programme: John Ireland- <em>Sonata for Cello and Piano</em><br>" +
+            "           Francois Francoeur-<em>Cello Sonata in E Major</em><br>" +
+            "13:10pm, July 10th 2024<br>Handsworth St Mary, Birmingham B20 2RW"
+    },
+    {
+        text: "ACCOMPANIST",
+        title: "Voice and Piano Concert with Ana Salaridze",
+        abstract: "13:00pm, August 7th 2024<br>Church of the Holy Trinity, Stratford-Upon-Avon, CV37 6BG"
+    },
+    {
+        text: "ACCOMPANIST",
+        title: "Voice and Piano Concert with Matthew Pandya",
+        abstract: "13:00pm, September 4th 2024<br>Church of the Holy Trinity, Stratford-Upon-Avon, CV37 6BG"
+    },
 ]
 var recent_articles = [
     {
-        text: "Dewefsign",
-        title: "Just a Normal Simple Blog Post.",
-        abstract: "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id" +
-            "et sit proident dolor nulla" +
-            "sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit" +
-            "sint in aliqua cillum in."
+        text: "ACCOMPANIST",
+        title: "Putting it Together, the Sondheim Review (Music& Lyrics by Stephen Sondheim)",
+        abstract: "19:00, March 22nd 2024<br>Seven Artspace, Chapel Allerton, Leeds, LS7 3PD"
     },
     {
-        text: "Lifestyle",
-        title: "Throwback To The Good Old Days.",
-        abstract: "Ipsam odio corrupti et dolores odit aliquid quo. Dolore consectetur a sit modi" +
-            "quam debitis non omnis. Enim ullam" +
-            "voluptatem ipsum soluta sed debitis nihil quasi. Et et et sit. Lorem ipsum Sed" +
-            "eiusmod esse aliqua sed incididunt."
+        text: "ACCOMPANIST",
+        title: "Putting it Together, the Sondheim Review (Music& Lyrics by Stephen Sondheim)",
+        abstract: "19:00, March 19th 2024<br>The Recital Hall, Royal Birmingham Conservatoire, Birmingham B4 7XR"
+    },
+    {
+        text: "REPETITEUR",
+        title: "Royal Birmingham Conservatoire Spring Opera<br>" +
+            "<em>Cinderella</em>— Jules Massenet ",
+        abstract: "Director <strong>Matthew Eberhardt</strong><br>Conductor <strong>Paul Wingfield</strong><br>February-March 2024<br>Royal Birmingham Conservatoire, Birmingham B4 7XR"
+    },
+    {
+        text: "REPETITEUR",
+        title: "Royal Birmingham Conservatoire Opera Scenes",
+        abstract: "Musical Director <strong>Berrak Dyer</strong><br>Director <strong>Rebecca Meltzer</strong><br>November 2023<br>The Lab, Royal Birmingham Conservatoire, Birmingham B4 7XR"
+    },
+    {
+        text: "CHMABER PIANIST",
+        title: "The Walbrook Music Trust Concert with Chian-Chian Hsu",
+        abstract: "Programme: Antonio Vivaldi- <em>Cello Sonata no.4 in B-flat Major, RV 45</em><br>" +
+                  "           Robert Schumann- <em>Fantasiestücke, Op.73</em>" +
+                  "           Benjamin Britten- <em>Sonata for Cello and Piano in C Major, op.65</em><br>13:00pm October 17th 2023" +
+            "St Stephen Walbrook, 39 Walbrook, London EC4N 8BN"
+    },
+    {
+        text: "ACCOMPANIST",
+        title: "Singing Songs from the Shows",
+        abstract: "19;30pm, December 1st 2023<br>Shenstone Community Library, Shenstone, Lichfield WS14 0NF"
     }
 ]
 
-class Header extends HTMLHeadElement {
+function play() {
+    var audio = document.getElementById("audio");
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+}
+
+class Header extends HTMLElement {
     connectedCallback() {
-        console.log("header");
         this.innerHTML = `    
         <header id="masthead" class="s-header">
             <div class="s-header__branding">
                 <p class="site-title">
-                    <a href="index.html" rel="home">Vera Lau.</a>
+                    <a href="index.html" rel="home">Yeeching Lau.</a>
                 </p>
             </div>
 
@@ -52,26 +105,30 @@ class Header extends HTMLHeadElement {
                     <h3 class="s-header__nav-heading">Navigate to</h3>
 
                     <ul class="s-header__nav">
-                        <li class="current-menu-item"><a href="index.html" title="">Home</a></li>
-                        <li class="has-children">
-                            <a href="#0" title="" class="">Diary</a>
-                            <ul class="sub-menu">
-                                <li><a href="upcoming.html">Upcoming</a></li>
-                                <li><a href="recent.html">Recent Engagements</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-children">
-                            <a href="#0" title="" class="">Blog</a>
-                            <ul class="sub-menu">
-                                <li><a href="single-standard.html">Standard Post</a></li>
-                                <li><a href="single-video.html">Video Post</a></li>
-                                <li><a href="single-audio.html">Audio Post</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="styles.html" title="">Styles</a></li>
-                        <li><a href="about.html" title="">About</a></li>
-                        <li><a href="contact.html" title="">Contact</a></li>
-                    </ul> <!-- end s-header__nav -->
+                    <li class="current-menu-item"><a href="index.html" title="">HOME</a></li>
+                    <li><a href="pages/about.html" title="">BIOGRAPHY</a></li>
+                    <li class="has-children">
+                        <a href="#0" title="" class="">DIARY</a>
+                        <ul class="sub-menu">
+                            <li><a href="pages/upcoming.html">Upcoming</a></li>
+                            <li><a href="pages/recent.html">Recent Engagements</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="#0" title="" class="">GALLERY</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Photos</a></li>
+                            <li><a href="">Videos</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="#0" title="" class="">REPERTOIRE</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Repertoire List</a></li>
+                            <li><a href="">Sample Programmes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pages/contact.html" title="">CONTACT</a></li>
 
                 </nav> <!-- end s-header__nav-wrap -->
 
@@ -98,35 +155,56 @@ class Footer extends HTMLElement {
             <div class="row s-footer__main">
 
                 <div class="column lg-5 md-6 tab-12 s-footer__about">
-                    <h4>Vera Lau</h4>
+                    <h4>Yeeching Lau</h4>
 
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo
-                    </p>
+                    <div class="column lg-7 md-6 tab-12">
+                        <ul class="s-footer__social">
+                            <li>
+                                <a href="https://www.instagram.com/yeechingo.o/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                                        <path
+                                            d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z">
+                                        </path>
+                                        <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                                        <path
+                                            d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42 c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111 c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71 c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45 c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633 c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311 c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311 c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654 c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712 c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055 c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669 c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z">
+                                        </path>
+                                    </svg>
+                                    <span class="u-screen-reader-text">Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/@YeechingLau">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                                        <path fill-rule="evenodd" d="M23,11.9972 C23,15.0688707 22.7080514,16.9571365 22.0247481,18.1281724 C21.3347709,19.3777602 20.5269977,19.7708297 18.8782989,19.8862992 C17.7148693,19.9542414 14.794638,20 12.0026667,20 C9.2044172,20 6.28275714,19.9542562 5.10860514,19.8855427 C3.47493151,19.7708031 2.66701263,19.37838 1.97791182,18.142374 C1.29279472,16.9480084 1,15.052042 1,12.0084 C1,8.94737365 1.29138368,7.06090428 1.97193166,5.86259947 C2.67010997,4.61046509 3.49111627,4.21325835 5.11100471,4.1184917 C6.23144506,4.04250638 8.99660854,4 12.0026667,4 C15.002263,4 17.766208,4.04252223 18.8782989,4.11790083 C20.5073007,4.21303163 21.3281267,4.60936303 22.020213,5.8580297 C22.7108012,7.06048454 23,8.93778123 23,11.9972 Z M20.283329,6.84963647 C19.9603324,6.26505017 19.7713697,6.17346202 18.752413,6.11391338 C17.6926261,6.04212137 14.954737,6 12.0026667,6 C9.04424331,6 6.3050775,6.04210674 5.2370951,6.1144916 C4.22844212,6.17352647 4.03674592,6.26627 3.71489655,6.84342165 C3.2475376,7.66638709 3,9.26898917 3,11.9972 C3,14.7270394 3.24886149,16.33852 3.71873501,17.1577995 C4.03565111,17.7261665 4.22600958,17.8186276 5.23703026,17.8897046 C6.34874254,17.9546989 9.24212825,18 12.0026667,18 C14.7569983,18 17.6489264,17.9546849 18.7500936,17.8904464 C19.7737637,17.8187098 19.961409,17.7274 20.2855157,17.1409953 C20.752236,16.3407623 21,14.7382734 21,12.0084 C21,9.25771396 20.7535449,7.66399511 20.283329,6.84963647 Z M10,9 L15,12 L10,15 L10,9 Z"/>
+                                    </svg>
+                                    <span class="u-screen-reader-text">Youtube</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div> <!-- end s-footer__about -->
 
                 <div class="column lg-5 md-6 tab-12">
                     <div class="row">
                         <div class="column lg-6">
-                            <h4>Diary</h4>
+                            <h4>DIARY</h4>
                             <ul class="link-list">
-                                <li><a href="upcoming.html">Upcoming</a></li>
-                                <li><a href="recent.html">Recent Engagements</a></li>
+                                <li><a href="pages/upcoming.html">Upcoming</a></li>
+                                <li><a href="pages/recent.html">Recent Engagements</a></li>
                             </ul>
                         </div>
                         <div class="column lg-6">
                             <h4>Site Links</h4>
                             <ul class="link-list">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="category.html">Diary</a></li>
-                                <li><a href="category.html">Blog</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="about.html">Contact</a></li>
-                                <li><a href="#0">Terms & Policy</a></li>
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="category.html">DIARY</a></li>
+                                <!-- <li><a href="category.html">Blog</a></li> -->
+                                <li><a href="pages/about.html">BIOGRAPHY</a></li>
+                                <li><a href="pages/about.html">Contact</a></li>
+                                <!-- <li><a href="#0">Terms & Policy</a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -135,62 +213,9 @@ class Footer extends HTMLElement {
             </div> <!-- end s-footer__main -->
 
             <div class="row s-footer__bottom">
-
-                <div class="column lg-7 md-6 tab-12">
-                    <ul class="s-footer__social">
-                        <li>
-                            <a href="#0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
-                                    <path
-                                        d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z">
-                                    </path>
-                                </svg>
-                                <span class="u-screen-reader-text">Facebook</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
-                                    <path
-                                        d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809 c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793 c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05 c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032 c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028 c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22 c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z">
-                                    </path>
-                                </svg>
-                                <span class="u-screen-reader-text">Twitter</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
-                                    <path
-                                        d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z">
-                                    </path>
-                                    <circle cx="16.806" cy="7.207" r="1.078"></circle>
-                                    <path
-                                        d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42 c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111 c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71 c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45 c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633 c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311 c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311 c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654 c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712 c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055 c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669 c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z">
-                                    </path>
-                                </svg>
-                                <span class="u-screen-reader-text">Instagram</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
-                                    <path
-                                        d="M11.99 2C6.472 2 2 6.473 2 11.99c0 4.232 2.633 7.85 6.35 9.306-.088-.79-.166-2.006.034-2.868.182-.78 1.172-4.966 1.172-4.966s-.299-.599-.299-1.484c0-1.388.805-2.425 1.808-2.425.853 0 1.264.64 1.264 1.407 0 .858-.546 2.139-.827 3.327-.235.994.499 1.805 1.479 1.805 1.775 0 3.141-1.872 3.141-4.575 0-2.392-1.719-4.064-4.173-4.064-2.843 0-4.512 2.132-4.512 4.335 0 .858.331 1.779.744 2.28a.3.3 0 0 1 .069.286c-.076.315-.245.994-.277 1.133-.044.183-.145.222-.335.134-1.247-.581-2.027-2.405-2.027-3.871 0-3.151 2.289-6.045 6.601-6.045 3.466 0 6.159 2.469 6.159 5.77 0 3.444-2.171 6.213-5.184 6.213-1.013 0-1.964-.525-2.29-1.146l-.623 2.374c-.225.868-.834 1.956-1.241 2.62a10 10 0 0 0 2.958.445c5.517 0 9.99-4.473 9.99-9.99S17.507 2 11.99 2">
-                                    </path>
-                                </svg>
-                                <span class="u-screen-reader-text">Pinterest</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
                 <div class="column lg-5 md-6 tab-12">
                     <div class="ss-copyright">
-                        <span>© Copyright Vera Lau</span>
+                        <span>© Copyright Yee Ching Lau</span>
                     </div>
                 </div>
 
@@ -232,15 +257,14 @@ class Article extends HTMLElement {
             <div class="entry__header">
                 <div class="entry__meta">
                     <span class="cat-links">
-                        <a href="#">${text}</a>
+                        ${text}
                     </span>
                 </div>
-                <h1 class="entry__title"><a href="single-standard.html">${title}</a></h1>
+                <h3 class="entry__title">${title}</h3>
             </div>
             <div class="entry__excerpt">
                 <p>${abstract}</p>
             </div>
-            <a class="entry__more-link" href="#0">Read More</a>
         </div>
         </article>
         `
@@ -254,10 +278,17 @@ class UpcomingArticles extends HTMLElement {
             template += `<my-article text="${upcoming_articles[i].text}" title="${upcoming_articles[i].title}" abstract="${upcoming_articles[i].abstract}"></my-article>`;
         }
         this.innerHTML = template;
-        console.log(template);
     }
 }
-
+class UpcomingArticlesHome extends HTMLElement {
+    connectedCallback() {
+        var template = ``
+        for (let i = 0; i < 2; i++) {
+            template += `<my-article text="${upcoming_articles[i].text}" title="${upcoming_articles[i].title}" abstract="${upcoming_articles[i].abstract}"></my-article>`;
+        }
+        this.innerHTML = template;
+    }
+}
 class RecentArticles extends HTMLElement {
     connectedCallback() {
         var template = ``
@@ -265,12 +296,12 @@ class RecentArticles extends HTMLElement {
             template += `<my-article text="${recent_articles[i].text}" title="${recent_articles[i].title}" abstract="${recent_articles[i].abstract}"></my-article>`;
         }
         this.innerHTML = template;
-        console.log(template);
     }
 }
 
 customElements.define('upcoming-articles', UpcomingArticles);
+customElements.define('upcoming-articles-home', UpcomingArticlesHome);
 customElements.define('recent-articles', RecentArticles);
 customElements.define('main-footer', Footer);
-customElements.define('main-header', Header, {extends:'header'});
+customElements.define('main-header', Header);//, { extends: 'header' }
 customElements.define('my-article', Article);

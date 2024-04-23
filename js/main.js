@@ -200,7 +200,7 @@
             const p = new Promise(function(resolve, reject) {
 
                 els.forEach(function(el, index, array) {
-                    const dly = index * 200;
+                    const dly = index * 150;
 
                     el.style.setProperty('--transition-delay', dly + 'ms');
                     if (index === array.length -1) resolve();
