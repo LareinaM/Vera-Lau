@@ -625,6 +625,9 @@ textarea {
 .column-bio {
     padding : 0 calc(var(--gutter)*1.5);
 }
+.column-rep {
+    padding : 0 calc(var(--gutter)*3);
+}
 
 .collapse>.column,
 .column.collapse {
@@ -4441,6 +4444,9 @@ body.search-is-visible .s-header__search-inner {
 .s-content--blog,
 .s-content--page {
     padding-top : calc(6.5 * var(--space));
+}
+.s-content--rep {
+    padding-top : calc(2.5 * var(--space));
 }
 
 .ss-home .s-content {
